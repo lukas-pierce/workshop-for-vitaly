@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>test</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+      border: 1px solid red;
+    }
+    .content {
+      width: 600px;
+      max-width: 100%;
+      margin: 0 auto 1rem;
+    }
+
+    .wrapper {
+      width: 600px;
+      max-width: 100%;
+      margin: 0 auto;
+      /*border: 1px solid red;*/
+      position: relative;
+    }
+
+    .square {
+      width: 50px;
+      height: 50px;
+      background: green;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .square:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    .main {
+      width: 100px;
+      height: 100px;
+      background: palegreen;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      position: absolute;
+      transform: translateY(20px);
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .col {
+      /*border: 1px solid black;*/
+    }
+
+    .col-left, .col-right {
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .col-left {
+      align-items: flex-start;
+    }
+
+    .col-right {
+      align-items: flex-end;
+    }
+
+    .col-center {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: center;
+      border: 1px solid red;
+    }
+
+    .layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .lines-layer {
+      background: rgba(255, 255, 0, 0.23);
+      /*pointer-events: none;*/
+    }
+
+    .line {
+      position: absolute;
+      border-top: 1px dashed blue;
+    }
+
+    .katet {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <p>
+      What is Lorem Ipsum?
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <p>
+      What is Lorem Ipsum?
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <p>
+      What is Lorem Ipsum?
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+  </div>
+  <div class="wrapper" id="wrapper">
+    <div class="row">
+      <div class="col col-left">
+        <div class="square">block</div>
+        <div class="square">block</div>
+        <div class="square">block</div>
+        <div class="square">block</div>
+        <div class="square">block</div>
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+      </div>
+      <div class="col col-center">
+        <div class="main" id="main">main</div>
+      </div>
+      <div class="col col-right">
+        <div class="square">block</div>
+        <div class="square">block</div>
+        <div class="square">block</div>
+        <div class="square">block</div>
+        <div class="square">block</div>
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+        <!--      <div class="square">block</div>-->
+      </div>
+    </div>
+    <div class="layer lines-layer" id="lines-layer">
+    </div>
+  </div>
+  <div class="content">
+    <p>
+      What is Lorem Ipsum?
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <p>
+      What is Lorem Ipsum?
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <p>
+      What is Lorem Ipsum?
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <p>
+      What is Lorem Ipsum?
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <p>
+      What is Lorem Ipsum?
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <p>
+      What is Lorem Ipsum?
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+  </div>
+
+  <!--<button id="rerender" type="button">rerender</button>-->
+</div>
+<script>
+  (function main () {
+
+    const wrapperEl = document.getElementById('wrapper')
+    const mainEl = document.getElementById('main')
+    const linesLayerEl = document.getElementById('lines-layer')
+
+    function renderA ({ x, y, width }) {
+      const el = document.createElement('DIV')
+      el.classList.add('katet')
+      el.classList.add('katet-a')
+      el.style.borderTop = '1px solid red'
+      if (width > 0) {
+        el.style.left = x + 'px'
+      } else {
+        el.style.left = x + width + 'px'
+      }
+      el.style.top = y + 'px'
+      el.style.width = Math.abs(width) + 'px'
+      linesLayerEl.append(el)
+    }
+
+    function renderB ({ x, y, height }) {
+      const el = document.createElement('DIV')
+      el.classList.add('katet')
+      el.classList.add('katet-b')
+      el.style.borderLeft = '1px solid red'
+      el.style.left = x + 'px'
+      if (height > 0) {
+        el.style.top = y + 'px'
+      } else {
+        el.style.top = y + height + 'px'
+      }
+      el.style.height = Math.abs(height) + 'px'
+      linesLayerEl.append(el)
+    }
+
+    function renderLine (squareEl) {
+      const wrapperRect = wrapperEl.getBoundingClientRect()
+      const rectMain = mainEl.getBoundingClientRect()
+      const rectSquare = squareEl.getBoundingClientRect()
+
+      // Целевой квадрат правее центрального блока?
+      const isSquareRighterThanMain = rectSquare.x > rectMain.x
+
+      let x1 = rectSquare.x - wrapperRect.x + rectSquare.width
+      if (isSquareRighterThanMain) x1 -= rectSquare.width
+      const y1 = rectSquare.y - wrapperRect.y + rectSquare.height / 2
+
+      let x2 = rectMain.x - wrapperRect.x
+      if (isSquareRighterThanMain) x2 += rectMain.width
+      const y2 = rectMain.y - wrapperRect.y + rectMain.height / 2
+
+      // Пифагор
+      const a = x2 - x1
+      const b = y2 - y1
+      const c = Math.sqrt(a ** 2 + b ** 2)
+      // renderA({ x: x1, y: y1, width: a })
+      // renderB({ x: x1 + a, y: y1, height: b })
+
+      // calc angle
+      const ang = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI
+
+      // render line
+      const lineEl = document.createElement('DIV')
+      lineEl.classList.add('line')
+      lineEl.style.left = x1 + 'px'
+      lineEl.style.top = y1 + 'px'
+      lineEl.style.width = c + 'px'
+      lineEl.style.transformOrigin = 'left'
+      lineEl.style.transform = `rotate(${ang}deg)`
+      linesLayerEl.append(lineEl)
+    }
+
+    function renderLines () {
+      linesLayerEl.innerHTML = ''
+      const squares = document.querySelectorAll('.square')
+      squares.forEach(renderLine)
+    }
+
+    renderLines()
+
+    const rerenderBtn = document.getElementById('rerender')
+    if (rerenderBtn) rerenderBtn.addEventListener('click', renderLines)
+
+    document.addEventListener('scroll', function () {
+      const wrapperRect = wrapperEl.getBoundingClientRect()
+      const wrapperDisYFromWindow = wrapperRect.y
+      const wrapperHeight = wrapperRect.height
+
+      const translateYMax = wrapperHeight - mainEl.getBoundingClientRect().height - 20
+
+      if (wrapperDisYFromWindow < 0) {
+        let translateY = wrapperDisYFromWindow * -1 + 20
+        if (translateY > translateYMax) {
+          translateY = translateYMax
+        }
+
+        mainEl.style.transform = `translateY(${translateY}px)`
+        renderLines()
+      }
+    })
+
+  })()
+</script>
+
+</body>
+</html>
