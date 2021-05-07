@@ -97,7 +97,7 @@
       border-top: 1px dashed black;
     }
 
-    .katet {
+    .leg {
       position: absolute;
     }
   </style>
@@ -197,10 +197,10 @@
     const mainEl = document.getElementById('main')
     const linesLayerEl = document.getElementById('lines-layer')
 
-    function renderA ({ x, y, width }) {
+    function renderLegA ({ x, y, width }) {
       const el = document.createElement('DIV')
-      el.classList.add('katet')
-      el.classList.add('katet-a')
+      el.classList.add('leg')
+      el.classList.add('leg-a')
       el.style.borderTop = '1px solid red'
       if (width > 0) {
         el.style.left = x + 'px'
@@ -212,10 +212,10 @@
       linesLayerEl.append(el)
     }
 
-    function renderB ({ x, y, height }) {
+    function renderLegB ({ x, y, height }) {
       const el = document.createElement('DIV')
-      el.classList.add('katet')
-      el.classList.add('katet-b')
+      el.classList.add('leg')
+      el.classList.add('leg-b')
       el.style.borderLeft = '1px solid red'
       el.style.left = x + 'px'
       if (height > 0) {
@@ -247,8 +247,8 @@
       const a = x2 - x1
       const b = y2 - y1
       const c = Math.sqrt(a ** 2 + b ** 2)
-      // renderA({ x: x1, y: y1, width: a })
-      // renderB({ x: x1 + a, y: y1, height: b })
+      // renderLegA({ x: x1, y: y1, width: a })
+      // renderLegB({ x: x1 + a, y: y1, height: b })
 
       // calc angle
       const ang = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI
@@ -272,8 +272,8 @@
 
     renderLines()
 
-    const rerenderBtn = document.getElementById('rerender')
-    if (rerenderBtn) rerenderBtn.addEventListener('click', renderLines)
+    const rerenderLegBtn = document.getElementById('rerender')
+    if (rerenderLegBtn) rerenderLegBtn.addEventListener('click', renderLines)
 
     document.addEventListener('scroll', function () {
       const wrapperRect = wrapperEl.getBoundingClientRect()
