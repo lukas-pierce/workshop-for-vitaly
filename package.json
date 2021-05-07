@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "serve"
+  },
   "dependencies": {
     "serve": "^11.3.2"
   }
